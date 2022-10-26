@@ -1,0 +1,47 @@
+Algoritmo "MenuLanchonete"
+
+Var
+// Seção de Declarações das variáveis 
+totalPedido: real
+item: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreval("Menu lanchonete")
+escreval()
+  totalPedido <- 0.0
+  item <- 0
+  repita
+    escreval()
+    escreval("1 – X-Salada (5,30)")
+    escreval("2 – X-Bacon (6,00)")
+    escreval("3 – X-Egg (6,70)")
+    escreval("4 – Refrigerante (3,2)")
+    escreval("5 – Finalizar pedido")
+
+    escreva("Escolha um item do menu: ")
+    leia(item)
+
+    escolha (item)
+      caso 1
+        escreval("Você escolheu X-Salada")
+        totalPedido <- totalPedido + 5.30
+      caso 2
+        escreval("Você escolheu X-Bacon")
+        totalPedido <- totalPedido + 6.00
+      caso 3
+        escreval("Você escolheu X-Egg")
+        totalPedido <- totalPedido + 6.70
+      caso 4
+        escreval("Você escolheu Refrigerante")
+        totalPedido <- totalPedido + 3.2
+      caso 5
+      outrocaso
+        escreval("Item inexistente")
+    fimescolha
+  ate item = 5
+
+
+  escreval("O total do seu pedido é: ", totalPedido)
+Fimalgoritmo
+
